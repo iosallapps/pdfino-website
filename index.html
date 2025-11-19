@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdfino - Comprimă PDF-uri pe iOS</title>
+    <meta name="description" content="Pdfino - Cea mai simplă aplicație iOS pentru comprimarea fișierelor PDF">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .cta {
+            margin: 40px 0;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .app-store-badge img {
+            height: 50px;
+            transition: transform 0.2s;
+        }
+
+        .app-store-badge img:hover {
+            transform: scale(1.05);
+        }
+
+        .links {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Pdfino</h1>
+        <p class="subtitle">Comprimă PDF-uri simplu și rapid pe iPhone</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🚀 Rapid</h3>
+                <p>Comprimă fișiere PDF în câteva secunde</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Sigur</h3>
+                <p>Toate fișierele rămân pe dispozitivul tău</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Simplu</h3>
+                <p>Interfață intuitivă și ușor de utilizat</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <p style="margin-bottom: 20px;">Descarcă aplicația acum</p>
+            <a href="#" class="app-store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ro-ro?size=250x83&amp;releaseDate=1702252800" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="terms.html">Termeni și Condiții</a>
+            <a href="privacy.html">Politica de Confidențialitate</a>
+        </div>
+
+        <div class="contact">
+            <p>Suport: <a href="mailto:pdfinoapp@gmail.com" style="color: white;">pdfinoapp@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
