@@ -35,7 +35,7 @@ export default function Hero() {
               PDF Toolkit
             </span>
             <br className="hidden sm:block" />
-            for iPhone
+            for iPhone & iPad
           </h1>
 
           {/* Subtitle */}

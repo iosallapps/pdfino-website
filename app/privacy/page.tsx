@@ -19,13 +19,6 @@ export default function PrivacyPage() {
           <p className="text-[var(--foreground-muted)]">Last Updated: January 24, 2026</p>
         </div>
 
-        {/* Developer Info */}
-        <div className="mb-8 p-4 rounded-xl bg-[var(--background-secondary)] border border-[var(--border)] text-sm text-[var(--foreground-muted)]">
-          <p><strong className="text-[var(--foreground)]">Developer:</strong> Cirjan Darius</p>
-          <p><strong className="text-[var(--foreground)]">Contact:</strong> pdfinoapp@gmail.com</p>
-          <p><strong className="text-[var(--foreground)]">App:</strong> Pdfino - PDF Toolkit for iPhone</p>
-        </div>
-
         {/* Key Promise */}
         <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
           <div className="flex items-start gap-4">
@@ -291,6 +284,12 @@ export default function PrivacyPage() {
             <p>
               <strong className="text-[var(--foreground)]">GDPR/CCPA:</strong> Users in the EU and California have additional rights under GDPR and CCPA respectively. EU users may lodge a complaint with their local data protection authority.
             </p>
+          </div>
+
+          {/* Developer Info */}
+          <div className="mt-8 pt-8 border-t border-[var(--border)] text-xs text-[var(--foreground-muted)]">
+            <p>Pdfino - PDF Toolkit for iPhone and iPad</p>
+            <p>Developer: Cirjan Darius | Contact: pdfinoapp@gmail.com</p>
           </div>
         </div>
       </div>

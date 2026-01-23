@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel anytime through your iPhone Settings > Apple ID > Subscriptions. You'll keep premium access until the end of your billing period.",
+    answer: "Yes, you can cancel anytime through your iPhone or iPad Settings > Apple ID > Subscriptions. You'll keep premium access until the end of your billing period.",
   },
   {
     question: "Which file formats are supported?",

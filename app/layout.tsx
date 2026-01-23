@@ -10,12 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pdfino - The PDF Toolkit for iPhone",
-  description: "Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private. The ultimate PDF toolkit for iPhone.",
-  keywords: ["PDF", "compress", "edit", "sign", "merge", "convert", "iPhone", "iOS", "app"],
+  title: "Pdfino - The PDF Toolkit for iPhone & iPad",
+  description: "Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private. The ultimate PDF toolkit for iPhone and iPad.",
+  keywords: ["PDF", "compress", "edit", "sign", "merge", "convert", "iPhone", "iPad", "iOS", "app"],
   authors: [{ name: "Pdfino" }],
   openGraph: {
-    title: "Pdfino - The PDF Toolkit for iPhone",
+    title: "Pdfino - The PDF Toolkit for iPhone & iPad",
     description: "Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private.",
     url: "https://pdfino.com",
     siteName: "Pdfino",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pdfino - The PDF Toolkit for iPhone",
+    title: "Pdfino - The PDF Toolkit for iPhone & iPad",
     description: "Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private.",
   },
   robots: {

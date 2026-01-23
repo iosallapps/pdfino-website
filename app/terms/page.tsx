@@ -20,13 +20,6 @@ export default function TermsPage() {
           <p className="text-[var(--foreground-muted)]">Last Updated: January 24, 2026</p>
         </div>
 
-        {/* Developer Info */}
-        <div className="mb-8 p-4 rounded-xl bg-[var(--background-secondary)] border border-[var(--border)] text-sm text-[var(--foreground-muted)]">
-          <p><strong className="text-[var(--foreground)]">Developer:</strong> Cirjan Darius</p>
-          <p><strong className="text-[var(--foreground)]">Contact:</strong> pdfinoapp@gmail.com</p>
-          <p><strong className="text-[var(--foreground)]">App:</strong> Pdfino - PDF Toolkit for iPhone</p>
-        </div>
-
         {/* Quick Summary */}
         <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20">
           <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-3">Quick Summary</h2>
@@ -62,7 +55,7 @@ export default function TermsPage() {
             </div>
 
             <p className="text-[var(--foreground-muted)] mb-4">
-              Pdfino is a PDF toolkit for iPhone that lets you:
+              Pdfino is a PDF toolkit for iPhone and iPad that lets you:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3">
@@ -129,7 +122,7 @@ export default function TermsPage() {
                 <ol className="space-y-2 text-[var(--foreground-muted)]">
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--brand)]/10 text-[var(--brand)] flex items-center justify-center text-sm font-medium">1</span>
-                    <span>Open <strong>Settings</strong> on your iPhone</span>
+                    <span>Open <strong>Settings</strong> on your iPhone or iPad</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--brand)]/10 text-[var(--brand)] flex items-center justify-center text-sm font-medium">2</span>
@@ -313,6 +306,12 @@ export default function TermsPage() {
               pdfinoapp@gmail.com
             </a>
           </section>
+
+          {/* Developer Info */}
+          <div className="mt-8 pt-8 border-t border-[var(--border)] text-xs text-[var(--foreground-muted)]">
+            <p>Pdfino - PDF Toolkit for iPhone and iPad</p>
+            <p>Developer: Cirjan Darius | Contact: pdfinoapp@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>

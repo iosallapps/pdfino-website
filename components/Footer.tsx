@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="text-2xl font-bold text-[var(--brand)]">Pdfino</span>
             </Link>
             <p className="text-[var(--foreground-muted)] max-w-sm mb-6">
-              The ultimate PDF toolkit for iPhone. Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private.
+              The ultimate PDF toolkit for iPhone and iPad. Compress, edit, sign, merge, and convert PDFs. 100% offline. 100% private.
             </p>
             <a
               href={APP_STORE_URL}
@@ -72,7 +72,7 @@ export default function Footer() {
             &copy; {currentYear} Pdfino. All rights reserved.
           </p>
           <p className="text-sm text-[var(--foreground-muted)]">
-            Made with care for iPhone users
+            Made with care for iPhone and iPad users
           </p>
         </div>
       </div>
