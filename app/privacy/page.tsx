@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Shield, Eye, Server, Lock, Bell, Trash2, Mail } from "lucide-react";
+import { Shield, Eye, Server, Lock, Bell, Trash2, Mail, Scale } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Pdfino",
@@ -17,6 +17,13 @@ export default function PrivacyPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Privacy Policy</h1>
           <p className="text-[var(--foreground-muted)]">Last Updated: January 24, 2026</p>
+        </div>
+
+        {/* Developer Info */}
+        <div className="mb-8 p-4 rounded-xl bg-[var(--background-secondary)] border border-[var(--border)] text-sm text-[var(--foreground-muted)]">
+          <p><strong className="text-[var(--foreground)]">Developer:</strong> Cirjan Darius</p>
+          <p><strong className="text-[var(--foreground)]">Contact:</strong> pdfinoapp@gmail.com</p>
+          <p><strong className="text-[var(--foreground)]">App:</strong> Pdfino - PDF Toolkit for iPhone</p>
         </div>
 
         {/* Key Promise */}
@@ -131,27 +138,39 @@ export default function PrivacyPage() {
                   <tr className="border-b border-[var(--border)]">
                     <th className="text-left py-3 px-4 font-medium">Service</th>
                     <th className="text-left py-3 px-4 font-medium">Purpose</th>
+                    <th className="text-left py-3 px-4 font-medium">Privacy Policy</th>
                   </tr>
                 </thead>
                 <tbody className="text-[var(--foreground-muted)]">
                   <tr className="border-b border-[var(--border)]">
                     <td className="py-3 px-4">Apple App Store</td>
                     <td className="py-3 px-4">Payments & Subscriptions</td>
+                    <td className="py-3 px-4"><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">View</a></td>
                   </tr>
                   <tr className="border-b border-[var(--border)]">
                     <td className="py-3 px-4">RevenueCat</td>
                     <td className="py-3 px-4">Subscription Management</td>
+                    <td className="py-3 px-4"><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">View</a></td>
                   </tr>
                   <tr className="border-b border-[var(--border)]">
                     <td className="py-3 px-4">Firebase</td>
                     <td className="py-3 px-4">Analytics & Crash Reports</td>
+                    <td className="py-3 px-4"><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">View</a></td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4">Google AdMob</td>
                     <td className="py-3 px-4">Ads (Free Users Only)</td>
+                    <td className="py-3 px-4"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] hover:underline">View</a></td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <div className="mt-4 p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
+              <h3 className="font-medium mb-2 text-blue-700 dark:text-blue-300">App Tracking Transparency</h3>
+              <p className="text-sm text-blue-800/80 dark:text-blue-200/80">
+                On iOS 14.5+, you will be asked for permission before any tracking for personalized ads. You can change this anytime in Settings &gt; Privacy &gt; Tracking.
+              </p>
             </div>
           </section>
 
@@ -232,6 +251,35 @@ export default function PrivacyPage() {
             </p>
           </section>
 
+          {/* Legal Basis (GDPR) */}
+          <section className="p-6 rounded-2xl bg-[var(--background-secondary)] border border-[var(--border)]">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[var(--brand)]/10 flex items-center justify-center">
+                <Scale className="w-5 h-5 text-[var(--brand)]" />
+              </div>
+              <h2 className="text-xl font-semibold">Legal Basis for Processing (GDPR)</h2>
+            </div>
+
+            <div className="space-y-3 text-sm">
+              <div className="p-3 rounded-lg bg-[var(--background)]">
+                <span className="font-medium text-[var(--foreground)]">Contract Performance</span>
+                <p className="text-[var(--foreground-muted)]">Processing needed to provide the app and subscription services you requested.</p>
+              </div>
+              <div className="p-3 rounded-lg bg-[var(--background)]">
+                <span className="font-medium text-[var(--foreground)]">Legitimate Interest</span>
+                <p className="text-[var(--foreground-muted)]">Analytics and crash reports to improve app quality and fix issues.</p>
+              </div>
+              <div className="p-3 rounded-lg bg-[var(--background)]">
+                <span className="font-medium text-[var(--foreground)]">Consent</span>
+                <p className="text-[var(--foreground-muted)]">Personalized ads (you can opt-out via App Tracking Transparency).</p>
+              </div>
+              <div className="p-3 rounded-lg bg-[var(--background)]">
+                <span className="font-medium text-[var(--foreground)]">Legal Obligation</span>
+                <p className="text-[var(--foreground-muted)]">When required by law (e.g., tax records for purchases).</p>
+              </div>
+            </div>
+          </section>
+
           {/* Legal Notes */}
           <div className="text-sm text-[var(--foreground-muted)] space-y-4">
             <p>
@@ -241,7 +289,7 @@ export default function PrivacyPage() {
               <strong className="text-[var(--foreground)]">Changes:</strong> We may update this policy and will notify you of significant changes through the app or email.
             </p>
             <p>
-              <strong className="text-[var(--foreground)]">GDPR/CCPA:</strong> Users in the EU and California have additional rights under GDPR and CCPA respectively.
+              <strong className="text-[var(--foreground)]">GDPR/CCPA:</strong> Users in the EU and California have additional rights under GDPR and CCPA respectively. EU users may lodge a complaint with their local data protection authority.
             </p>
           </div>
         </div>

@@ -20,6 +20,13 @@ export default function TermsPage() {
           <p className="text-[var(--foreground-muted)]">Last Updated: January 24, 2026</p>
         </div>
 
+        {/* Developer Info */}
+        <div className="mb-8 p-4 rounded-xl bg-[var(--background-secondary)] border border-[var(--border)] text-sm text-[var(--foreground-muted)]">
+          <p><strong className="text-[var(--foreground)]">Developer:</strong> Cirjan Darius</p>
+          <p><strong className="text-[var(--foreground)]">Contact:</strong> pdfinoapp@gmail.com</p>
+          <p><strong className="text-[var(--foreground)]">App:</strong> Pdfino - PDF Toolkit for iPhone</p>
+        </div>
+
         {/* Quick Summary */}
         <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20">
           <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-3">Quick Summary</h2>
@@ -140,6 +147,13 @@ export default function TermsPage() {
               </div>
 
               <div>
+                <h3 className="font-medium mb-2">Pricing</h3>
+                <p className="text-sm text-[var(--foreground-muted)]">
+                  Current subscription prices are displayed in the App Store and within the app before purchase. Prices may vary by region and are subject to change. Any price changes will not affect active subscriptions until renewal.
+                </p>
+              </div>
+
+              <div>
                 <h3 className="font-medium mb-2">Refunds</h3>
                 <p className="text-sm text-[var(--foreground-muted)]">
                   All refunds are handled by Apple. Visit{" "}
@@ -241,8 +255,28 @@ export default function TermsPage() {
               </div>
 
               <div>
+                <h3 className="font-medium text-[var(--foreground)] mb-1">Governing Law</h3>
+                <p className="text-sm">These terms are governed by the laws of Romania, without regard to conflict of law principles. For EU consumers, mandatory consumer protection laws of your country of residence also apply.</p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-[var(--foreground)] mb-1">Dispute Resolution</h3>
+                <p className="text-sm">Any disputes shall first be attempted to be resolved through good-faith negotiation by contacting us at pdfinoapp@gmail.com. If unresolved within 30 days, disputes may be submitted to the competent courts in Romania, or for EU consumers, the courts of your place of residence.</p>
+              </div>
+
+              <div>
                 <h3 className="font-medium text-[var(--foreground)] mb-1">Termination</h3>
                 <p className="text-sm">We may terminate access for violations of these terms or abuse of the service.</p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-[var(--foreground)] mb-1">Severability</h3>
+                <p className="text-sm">If any provision of these terms is found invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-[var(--foreground)] mb-1">Entire Agreement</h3>
+                <p className="text-sm">These terms, together with our Privacy Policy, constitute the entire agreement between you and Cirjan Darius regarding Pdfino.</p>
               </div>
 
               <div>
