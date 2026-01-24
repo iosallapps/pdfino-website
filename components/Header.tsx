@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { APP_STORE_URL } from "@/lib/constants";
 
@@ -14,7 +13,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -75,79 +74,50 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-[var(--foreground-muted)] hover:text-[var(--foreground)] z-50"
+            className="md:hidden p-2 text-[var(--foreground-muted)] hover:text-[var(--foreground)] z-50 transition-colors"
             aria-label="Toggle menu"
           >
-            <AnimatePresence mode="wait">
-              {isMenuOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ opacity: 0, rotate: -90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 90 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <X size={24} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ opacity: 0, rotate: 90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: -90 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu size={24} />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Overlay */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-0 top-16 bg-[var(--background)]/95 backdrop-blur-lg z-40"
+      <div
+        className={`md:hidden fixed inset-0 top-16 bg-[var(--background)]/95 backdrop-blur-lg z-40 transition-all duration-300 ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <nav
+          className={`flex flex-col items-center justify-center gap-8 h-full pb-20 transition-all duration-300 ${
+            isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+          }`}
+        >
+          <Link
+            href="/privacy"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-medium text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors"
           >
-            <motion.nav
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className="flex flex-col items-center justify-center gap-8 h-full pb-20"
-            >
-              <Link
-                href="/privacy"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-medium text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/terms"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-medium text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors"
-              >
-                Terms
-              </Link>
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--brand)] px-8 py-4 text-lg font-medium text-white hover:bg-[var(--brand-dark)] transition-colors shadow-lg shadow-[var(--brand)]/20"
-              >
-                Download Free
-              </a>
-            </motion.nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            Privacy
+          </Link>
+          <Link
+            href="/terms"
+            onClick={() => setIsMenuOpen(false)}
+            className="text-2xl font-medium text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors"
+          >
+            Terms
+          </Link>
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+            className="inline-flex items-center justify-center rounded-full bg-[var(--brand)] px-8 py-4 text-lg font-medium text-white hover:bg-[var(--brand-dark)] transition-colors shadow-lg shadow-[var(--brand)]/20"
+          >
+            Download Free
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }
