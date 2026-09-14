@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import ToolsList from "@/components/ToolsList";
-import Pricing from "@/components/Pricing";
+import Showcases from "@/components/Showcases";
+import Tools from "@/components/Tools";
+import Privacy from "@/components/Privacy";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 
@@ -10,10 +9,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <HowItWorks />
-      <ToolsList />
-      <Pricing />
+      <Showcases />
+      <Tools />
+      <Privacy />
       <FAQ />
       <CTA />
     </>

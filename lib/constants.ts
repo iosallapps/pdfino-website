@@ -1,84 +1,40 @@
-export const APP_STORE_URL = "https://apps.apple.com/app/pdfino/id6748689545";
+import { SITE } from "@/lib/content";
 
-export const FEATURES = [
-  {
-    title: "Compress",
-    description: "Reduce PDF file size by up to 90% without losing quality",
-    icon: "FileDown",
-  },
-  {
-    title: "Edit",
-    description: "Annotate, sign, fill forms, and add text to any PDF",
-    icon: "PenTool",
-  },
+export const APP_STORE_URL = SITE.appStoreUrl;
+
+/**
+ * The app's tools, named and grouped as in the Tools tab (ConvertFeature.swift and
+ * ConvertViewModel.toolSections). The app's "Most Popular" row repeats tools from other
+ * sections, so the three it holds alone lead here instead.
+ */
+export const TOOL_SECTIONS = [
+  { title: "Compress, merge and split", tools: ["Compress PDF", "Merge PDFs", "Split PDF"] },
   {
     title: "Convert",
-    description: "Transform PDFs to images and images to PDFs instantly",
-    icon: "RefreshCw",
+    tools: ["Scan PDF", "Scan QR Code", "PDF to Images", "Images to PDF", "URL to PDF", "Word to PDF", "Markdown to PDF", "HTML to PDF"],
   },
   {
-    title: "Organize",
-    description: "Merge, split, reorder, and rotate pages with ease",
-    icon: "Layers",
+    title: "Page Tools",
+    tools: [
+      "Reorder Pages",
+      "Rotate PDF",
+      "Extract Text",
+      "Crop PDF",
+      "Page Numbers",
+      "Extract Pages",
+      "Delete Pages",
+      "Duplicate Pages",
+      "Blank Pages",
+      "Replace Pages",
+      "Resize Pages",
+    ],
   },
   {
-    title: "Secure",
-    description: "Password protect and redact sensitive information",
-    icon: "Shield",
+    title: "Edit & Annotate",
+    tools: ["Annotate PDF", "Fill Forms", "Flatten PDF", "Watermark", "Redact PDF", "Headers & Footers", "Add Bookmarks", "Compare PDFs"],
   },
-  {
-    title: "Private",
-    description: "100% offline processing. Your files never leave your device",
-    icon: "Lock",
-  },
+  { title: "Security", tools: ["Protect PDF", "Unlock PDF", "E-Sign PDF", "Remove Metadata", "Set Permissions"] },
+  { title: "Text & Quality", tools: ["Translate PDF", "Optimize PDF", "Repair PDF", "OCR PDF"] },
 ];
 
-export const TOOLS = [
-  "Annotate",
-  "E-Sign",
-  "Watermark",
-  "Crop",
-  "Redact",
-  "Merge",
-  "Split",
-  "Reorder",
-  "Rotate",
-  "Flatten",
-  "Protect",
-  "Unlock",
-  "Fill Forms",
-  "Page Numbers",
-  "Compress",
-  "PDF to Images",
-  "Images to PDF",
-  "Word to PDF",
-  "URL to PDF",
-  "OCR",
-];
-
-export const PRICING = [
-  {
-    name: "Free",
-    price: "$0",
-    period: "",
-    features: ["10 compressions/day", "All 20+ tools", "Basic features"],
-    cta: "Try Free",
-    highlighted: false,
-  },
-  {
-    name: "Monthly",
-    price: "$4.99",
-    period: "/month",
-    features: ["Unlimited compressions", "All premium features", "No ads"],
-    cta: "Subscribe",
-    highlighted: true,
-  },
-  {
-    name: "Lifetime",
-    price: "$49.99",
-    period: "once",
-    features: ["Unlimited forever", "All future updates", "Best value"],
-    cta: "Buy Once",
-    highlighted: false,
-  },
-];
+export const TOOL_COUNT = TOOL_SECTIONS.reduce((count, section) => count + section.tools.length, 0);

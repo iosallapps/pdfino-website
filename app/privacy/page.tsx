@@ -20,14 +20,14 @@ export default function PrivacyPage() {
         </div>
 
         {/* Key Promise */}
-        <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
+        <div className="mb-12 p-6 rounded-2xl neu-card">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-              <Lock className="w-6 h-6 text-green-600 dark:text-green-400" />
+            <div className="flex-shrink-0 w-12 h-12 rounded-xl neu-inset flex items-center justify-center">
+              <Lock className="w-6 h-6 text-[var(--accent-text)]" />
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-green-700 dark:text-green-300 mb-2">Privacy First</h2>
-              <p className="text-green-800/80 dark:text-green-200/80">
+              <h2 className="text-xl font-semibold text-[var(--accent-text)] mb-2">Privacy First</h2>
+              <p className="text-[var(--foreground)]">
                 All file processing happens 100% locally on your device. Your files are never uploaded to our servers. We cannot see your documents.
               </p>
             </div>
@@ -78,9 +78,9 @@ export default function PrivacyPage() {
                 </ul>
               </div>
 
-              <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
-                <h3 className="font-medium mb-2 text-green-700 dark:text-green-300">What We NEVER Collect</h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-green-800/80 dark:text-green-200/80">
+              <div className="p-4 rounded-xl neu-inset">
+                <h3 className="font-medium mb-2 text-[var(--accent-text)]">What We NEVER Collect</h3>
+                <div className="grid grid-cols-2 gap-2 text-sm text-[var(--foreground)]">
                   <span>Your files</span>
                   <span>File contents</span>
                   <span>File names</span>

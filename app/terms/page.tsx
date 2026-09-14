@@ -74,9 +74,9 @@ export default function TermsPage() {
               ))}
             </div>
 
-            <div className="mt-4 p-4 rounded-xl bg-green-500/10 border border-green-500/20">
-              <p className="text-sm text-green-800/80 dark:text-green-200/80">
-                <strong className="text-green-700 dark:text-green-300">100% Local Processing:</strong> All files are processed on your device. Nothing is uploaded to servers.
+            <div className="mt-4 p-4 rounded-xl neu-inset">
+              <p className="text-sm text-[var(--foreground)]">
+                <strong className="text-[var(--accent-text)]">100% Local Processing:</strong> All files are processed on your device. Nothing is uploaded to servers.
               </p>
             </div>
           </section>
@@ -170,7 +170,7 @@ export default function TermsPage() {
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-medium mb-3 text-green-600 dark:text-green-400 flex items-center gap-2">
+                <h3 className="font-medium mb-3 text-[var(--accent-text)] flex items-center gap-2">
                   <Check className="w-4 h-4" /> Do
                 </h3>
                 <ul className="space-y-2 text-[var(--foreground-muted)]">
