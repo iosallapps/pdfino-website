@@ -3,7 +3,8 @@ import { FileText, Check, AlertTriangle, CreditCard, XCircle, Scale, Mail } from
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Pdfino",
+  title: "Terms of Service",
+  alternates: { canonical: "/terms.html" },
   description: "Terms of Service for Pdfino PDF toolkit app.",
 };
 
@@ -21,23 +22,23 @@ export default function TermsPage() {
         </div>
 
         {/* Quick Summary */}
-        <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20">
-          <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-3">Quick Summary</h2>
-          <ul className="space-y-2 text-blue-800/80 dark:text-blue-200/80">
+        <div className="mb-12 p-6 rounded-2xl bg-accent-wash border border-accent/20">
+          <h2 className="text-lg font-semibold text-accent-text mb-3">Quick Summary</h2>
+          <ul className="space-y-2 text-ink-muted">
             <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
               <span>Use Pdfino for lawful purposes only</span>
             </li>
             <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
               <span>All file processing is local - your files stay on your device</span>
             </li>
             <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
               <span>Always backup files before processing</span>
             </li>
             <li className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
               <span>Subscriptions are managed through Apple</span>
             </li>
           </ul>

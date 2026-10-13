@@ -16,7 +16,7 @@ export default function CTA() {
               height={96}
               alt=""
               loading="lazy"
-              className="mx-auto rounded-[22.37%] shadow-[0_12px_28px_rgb(214_48_42/0.3)]"
+              className="mx-auto rounded-[22.37%] shadow-[0_12px_28px_rgb(176_12_20/0.3)]"
             />
             <h2 className="mx-auto mt-8 max-w-xl text-[clamp(2rem,4.2vw,3rem)] font-bold leading-[1.08] tracking-[-0.02em] text-ink">
               <Highlighted text={COPY.title} />

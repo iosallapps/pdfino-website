@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Shield, Eye, Server, Lock, Bell, Trash2, Mail, Scale } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Pdfino",
+  title: "Privacy Policy",
+  alternates: { canonical: "/privacy.html" },
   description: "Learn how Pdfino protects your privacy. All file processing happens locally on your device.",
 };
 
@@ -159,9 +160,9 @@ export default function PrivacyPage() {
               </table>
             </div>
 
-            <div className="mt-4 p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
-              <h3 className="font-medium mb-2 text-blue-700 dark:text-blue-300">App Tracking Transparency</h3>
-              <p className="text-sm text-blue-800/80 dark:text-blue-200/80">
+            <div className="mt-4 p-4 rounded-xl bg-accent-wash border border-accent/20">
+              <h3 className="font-medium mb-2 text-accent-text">App Tracking Transparency</h3>
+              <p className="text-sm text-ink-muted">
                 On iOS 14.5+, you will be asked for permission before any tracking for personalized ads. You can change this anytime in Settings &gt; Privacy &gt; Tracking.
               </p>
             </div>

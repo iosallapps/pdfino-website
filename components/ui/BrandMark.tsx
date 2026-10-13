@@ -13,7 +13,7 @@ export default function BrandMark({ size = "sm" }: { size?: keyof typeof SIZES }
         width={side}
         height={side}
         alt=""
-        className="rounded-[22.37%] shadow-[0_6px_14px_rgb(214_48_42/0.25)]"
+        className="rounded-[22.37%] shadow-[0_6px_14px_rgb(176_12_20/0.25)]"
       />
       <span className={`font-bold tracking-[-0.01em] text-ink ${size === "lg" ? "text-2xl" : "text-xl"}`}>Pdfino</span>
     </Link>

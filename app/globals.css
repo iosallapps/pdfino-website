@@ -9,9 +9,9 @@
   --surface: #f8f7fa;
   --well: #e7e6ec;
   --line: #e3dfe6;
-  --accent: #d6302a;
-  --accent-text: #be231d;
-  --accent-wash: #fbe3e4;
+  --accent: #d0121b;
+  --accent-text: #b30f18;
+  --accent-wash: #fbe2e3;
   --ink: #17161b;
   --ink-muted: #5f5b66;
   /* shadow colours as RGB channels, so each use can set its own alpha */
@@ -20,7 +20,7 @@
   --shadow-light: 255 255 255;
   --shadow-light-alpha: 0.95;
   --rim: rgb(255 255 255 / 0.9);
-  --glow: rgb(214 48 42 / 0.12);
+  --glow: rgb(208 18 27 / 0.12);
 
   /* legacy names, still used by the privacy, terms and not-found pages */
   --brand: var(--accent);
@@ -41,8 +41,8 @@
     --surface: #201d23;
     --well: #121014;
     --line: #2f2b33;
-    --accent: #f04a40;
-    --accent-text: #ff6a5f;
+    --accent: #ec2f33;
+    --accent-text: #ff5f5c;
     --accent-wash: #3a1d20;
     --ink: #f4f2f6;
     --ink-muted: #a9a4b0;
@@ -51,7 +51,7 @@
     --shadow-light: 255 255 255;
     --shadow-light-alpha: 0.05;
     --rim: rgb(255 255 255 / 0.07);
-    --glow: rgb(240 74 64 / 0.1);
+    --glow: rgb(236 47 51 / 0.1);
     color-scheme: dark;
   }
 }

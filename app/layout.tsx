@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   description: SITE.description,
   applicationName: "Pdfino",
   keywords: ["PDF", "compress PDF", "scan to PDF", "merge PDF", "split PDF", "sign PDF", "iPhone", "iPad"],
-  alternates: { canonical: "/" },
   openGraph: {
     title: SITE.title,
     description: SITE.description,
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Pdfino",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Pdfino on iPhone" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "The Pdfino app icon and Pdfino on iPhone" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -37,6 +36,13 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   itunes: { appId: SITE.appStoreId },
+  icons: {
+    icon: [
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   robots: { index: true, follow: true },
 };
 

@@ -4,11 +4,13 @@
 
 export const SITE = {
   url: "https://pdfino.com",
-  title: "Pdfino: PDF tools for iPhone and iPad",
+  title: "Pdfino: the iPhone and iPad app to compress, sign, scan and merge PDFs",
   description:
-    "Compress, scan, merge, split, sign, fill, protect and convert PDFs on iPhone and iPad. Every job runs on your device, with no account to create.",
+    "Pdfino, the iPhone and iPad app to compress, sign, scan and merge PDFs. It also splits, fills, protects and converts them, on your device, with no account to create.",
   appStoreId: "6748689545",
-  appStoreUrl: "https://apps.apple.com/app/pdfino/id6748689545",
+  appStoreUrl: "https://apps.apple.com/app/id6748689545",
+  logoUrl: "https://pdfino.com/icon-512.png",
+  officialNote: "Pdfino is an iOS and iPadOS app available on the App Store. pdfino.com is its only official website.",
   supportEmail: "pdfinoapp@gmail.com",
 };
 
@@ -101,6 +103,10 @@ export const FAQS = [
     question: "Are my files uploaded anywhere?",
     answer:
       "No. Your documents are processed on your device and there is no Pdfino server to send them to. Two tools fetch a web address you type in yourself, and that is the only time a document you are working on involves the network.",
+  },
+  {
+    question: "Is this the official Pdfino website?",
+    answer: "Yes. Pdfino is an iOS and iPadOS app available on the App Store. pdfino.com is its only official website.",
   },
   {
     question: "Does Pdfino work on iPad?",

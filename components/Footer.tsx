@@ -42,7 +42,12 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-line">
-        <p className="mx-auto max-w-6xl px-5 py-6 text-sm text-ink-muted sm:px-8">&copy; {year} Pdfino. All rights reserved.</p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-sm text-ink-muted sm:px-8">
+          <p>
+            <span className="font-semibold text-ink">Official Pdfino.</span> {SITE.officialNote}
+          </p>
+          <p>&copy; {year} Pdfino. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
