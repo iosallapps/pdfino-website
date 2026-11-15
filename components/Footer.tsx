@@ -46,7 +46,7 @@ export default function Footer() {
           <p>
             <span className="font-semibold text-ink">Official Pdfino.</span> {SITE.officialNote}
           </p>
-          <p>&copy; {year} Pdfino. All rights reserved.</p>
+          <p>&copy; {year} Visto Apps, the brand of Darius Cirjan</p>
         </div>
       </div>
     </footer>

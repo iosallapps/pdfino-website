@@ -88,7 +88,7 @@ export const PRIVACY = {
     },
     {
       title: "Clear about the network",
-      body: "Two tools fetch a web address you type in yourself. The app shows ads and uses analytics only if you allow it.",
+      body: "Two tools load a web address you type in yourself, and Translate PDF uses the iOS translation sheet. Free users see ads. Usage statistics and crash reports follow your consent choices, and you can turn them off in Settings.",
     },
   ],
 };
@@ -102,7 +102,7 @@ export const FAQS = [
   {
     question: "Are my files uploaded anywhere?",
     answer:
-      "No. Your documents are processed on your device and there is no Pdfino server to send them to. Two tools fetch a web address you type in yourself, and that is the only time a document you are working on involves the network.",
+      "No. Your documents are processed on your device and there is no Pdfino server to send them to. Two tools load a web address you type in yourself, and Translate PDF hands its text to the translation sheet of iOS. Ads and usage statistics are separate from your files and follow your consent choices.",
   },
   {
     question: "Is this the official Pdfino website?",
