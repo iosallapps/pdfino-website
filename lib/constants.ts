@@ -1,7 +1,3 @@
-import { SITE } from "@/lib/content";
-
-export const APP_STORE_URL = SITE.appStoreUrl;
-
 /**
  * The app's tools, named and grouped as in the Tools tab (ConvertFeature.swift and
  * ConvertViewModel.toolSections). The app's "Most Popular" row repeats tools from other

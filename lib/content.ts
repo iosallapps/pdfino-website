@@ -16,7 +16,7 @@ export const SITE = {
   supportEmail: "iosallapps@gmail.com",
 };
 
-export type ScreenName = "home" | "scan" | "compress" | "merge" | "split" | "annotate" | "protect";
+export type ScreenName = "home" | "scan" | "compress" | "split" | "protect";
 
 export type Showcase = {
   id: string;
