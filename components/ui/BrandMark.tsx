@@ -1,21 +1,12 @@
 import Link from "next/link";
 
-const SIZES = { sm: 36, lg: 48 };
-
-/** The red app icon with the name, as the app's screen headers show it. */
-export default function BrandMark({ size = "sm" }: { size?: keyof typeof SIZES }) {
-  const side = SIZES[size];
+/** The app icon with the name. */
+export default function BrandMark() {
   return (
-    <Link href="/" className="inline-flex items-center gap-3" aria-label="Pdfino home">
+    <Link href="/" className="logo" aria-label="Pdfino home">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/brand/pdfino-icon-96.webp"
-        width={side}
-        height={side}
-        alt=""
-        className="rounded-[22.37%] shadow-[0_6px_14px_rgb(176_12_20/0.25)]"
-      />
-      <span className={`font-bold tracking-[-0.01em] text-ink ${size === "lg" ? "text-2xl" : "text-xl"}`}>Pdfino</span>
+      <img src="/brand/pdfino-icon-256.webp" width={38} height={38} alt="" />
+      Pdfino
     </Link>
   );
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import BrandMark from "@/components/ui/BrandMark";
 import { SITE } from "@/lib/content";
@@ -9,24 +12,49 @@ const NAV = [
   { href: "/#faq", label: "FAQ" },
 ];
 
+const SCROLL_THRESHOLD = 8;
+
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line/60 bg-page/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+    <header className={`${scrolled ? "is-scrolled" : ""} ${open ? "menu-open" : ""}`.trim()}>
+      <div className="container">
         <BrandMark />
-        <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
-          {NAV.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-ink-muted transition-colors hover:text-ink">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <a
-          href={SITE.appStoreUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="neu-chip neu-press px-5 py-2.5 text-sm font-semibold text-accent-text"
+        <button
+          type="button"
+          className="mobile-menu-btn"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="main-nav"
+          onClick={() => setOpen((value) => !value)}
         >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <nav aria-label="Main" id="main-nav">
+          <ul className="nav-links">
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} onClick={() => setOpen(false)}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <a href={SITE.appStoreUrl} target="_blank" rel="noopener noreferrer" className="btn-glow btn-sm nav-cta">
           Get the app
         </a>
       </div>

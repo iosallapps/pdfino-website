@@ -26,7 +26,7 @@ export default function PhoneShot({ name, alt, priority = false, sizes = "(min-w
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
-      className={`phone-shadow h-auto w-full ${className}`}
+      className={`phone ${className}`.trim()}
     />
   );
 }

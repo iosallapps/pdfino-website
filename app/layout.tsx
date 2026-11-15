@@ -1,15 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/content";
-
-// Apple devices render the system font; Inter is the fallback everywhere else.
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -47,10 +40,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2f1f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#161418" },
-  ],
+  themeColor: "#14070d",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -60,9 +51,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} flex min-h-screen flex-col antialiased`}>
+      <body>
+        <div className="animated-bg" aria-hidden="true" />
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>

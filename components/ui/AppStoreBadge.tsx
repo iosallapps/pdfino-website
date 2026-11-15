@@ -1,14 +1,20 @@
 import { SITE } from "@/lib/content";
 
-const BADGE_URL = "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg";
-const HEIGHTS = { sm: "h-10", lg: "h-14" };
+const BADGE_SRC = "/brand/app-store-badge.svg";
+const WIDTH = 120;
+const HEIGHT = 40;
 
-export default function AppStoreBadge({ size = "lg" }: { size?: keyof typeof HEIGHTS }) {
+export default function AppStoreBadge({ size = "lg" }: { size?: "sm" | "lg" }) {
   return (
-    <a href={SITE.appStoreUrl} target="_blank" rel="noopener noreferrer" className="neu-press inline-block rounded-[12px]">
-      {/* Apple's official badge, served by Apple. */}
+    <a
+      href={SITE.appStoreUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`badge-link ${size === "lg" ? "badge-lg" : "badge-sm"}`}
+    >
+      {/* Apple's official badge, kept on this site so no page loads anything from Apple. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={BADGE_URL} alt="Download on the App Store" className={`${HEIGHTS[size]} w-auto`} />
+      <img src={BADGE_SRC} width={WIDTH} height={HEIGHT} alt="Download on the App Store" />
     </a>
   );
 }
