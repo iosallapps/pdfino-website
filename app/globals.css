@@ -345,3 +345,7 @@ footer { position: relative; margin-top: 20px; background: rgba(12, 3, 8, .6); b
   header.is-scrolled, header.menu-open { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(20, 7, 13, .94); }
 }
 .nav-links a.lang-switch { border: 1px solid var(--glass-line); }
+
+/* overscroll: the aurora stretches from its bottom edge while iOS rubber-bands the top
+   (--osy set by components/Overscroll.tsx) */
+.animated-bg { transform-origin: 50% 100%; scale: 1 calc(1 + var(--osy, 0) / 1500); }

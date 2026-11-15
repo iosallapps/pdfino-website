@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { THEME_TOP } from "@/lib/constants";
 import Link from "next/link";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export const viewport: Viewport = { themeColor: "#14070d", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: THEME_TOP, colorScheme: "dark" };
 
 export default function GlobalNotFound() {
   const c = COPY.en.ui.notFound;

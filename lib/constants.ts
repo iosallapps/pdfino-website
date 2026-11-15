@@ -35,3 +35,11 @@ export const TOOL_SECTIONS = [
 ];
 
 export const TOOL_COUNT = TOOL_SECTIONS.reduce((count, section) => count + section.tools.length, 0);
+
+/**
+ * Browser bar color: the aurora's top color while the page is at the top, the page
+ * background once it scrolls (same switch as vistoapps.com). THEME_TOP is the static
+ * theme-color in every layout; components/Overscroll.tsx swaps it on scroll.
+ */
+export const THEME_TOP = "#4a1726";
+export const THEME_SCROLLED = "#14070d";

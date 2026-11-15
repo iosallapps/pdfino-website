@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Overscroll from "@/components/Overscroll";
 import { COPY, type Lang } from "@/lib/content";
 
 /** Fonts used above the fold, preloaded so the headline does not wait for the stylesheet. */
@@ -21,6 +22,7 @@ export default function SiteShell({ lang, children }: { lang: Lang; children: Re
         <Header lang={lang} />
         <main id="main">{children}</main>
         <Footer lang={lang} />
+        <Overscroll />
       </body>
     </html>
   );
