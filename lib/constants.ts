@@ -5,7 +5,8 @@ export const APP_STORE_URL = SITE.appStoreUrl;
 /**
  * The app's tools, named and grouped as in the Tools tab (ConvertFeature.swift and
  * ConvertViewModel.toolSections). The app's "Most Popular" row repeats tools from other
- * sections, so the three it holds alone lead here instead.
+ * sections, so the three it holds alone lead here instead. Names are English keys; the
+ * Romanian names live in COPY.ro.toolSections.
  */
 export const TOOL_SECTIONS = [
   { title: "Compress, merge and split", tools: ["Compress PDF", "Merge PDFs", "Split PDF"] },

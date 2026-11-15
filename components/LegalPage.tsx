@@ -1,3 +1,5 @@
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbData } from "@/lib/structuredData";
 import { LEGAL_HTML, type LegalKind, type LegalLang } from "@/lib/legalContent";
 
 const SWITCH: Record<LegalKind, Record<LegalLang, { href: string; label: string; hreflang: string }>> = {
@@ -12,10 +14,11 @@ const SWITCH: Record<LegalKind, Record<LegalLang, { href: string; label: string;
 };
 
 /** The generated Privacy Policy or Terms, in English or Romanian, with a link to the other language. */
-export default function LegalPage({ kind, lang }: { kind: LegalKind; lang: LegalLang }) {
+export default function LegalPage({ kind, lang, breadcrumb }: { kind: LegalKind; lang: LegalLang; breadcrumb: { name: string; path: string } }) {
   const other = SWITCH[kind][lang];
   return (
     <div lang={lang} className="legal-page">
+      <JsonLd data={breadcrumbData(lang, breadcrumb.name, breadcrumb.path)} />
       <p className="legal-switch">
         <a href={other.href} hrefLang={other.hreflang}>
           {other.label}

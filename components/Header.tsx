@@ -3,18 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import BrandMark from "@/components/ui/BrandMark";
-import { SITE } from "@/lib/content";
+import { COPY, SITE, type Lang } from "@/lib/content";
 
-const NAV = [
-  { href: "/#features", label: "Features" },
-  { href: "/#tools", label: "Tools" },
-  { href: "/#privacy", label: "Privacy" },
-  { href: "/#faq", label: "FAQ" },
-];
+const NAV_IDS = ["features", "tools", "privacy", "faq"] as const;
 
 const SCROLL_THRESHOLD = 8;
 
-export default function Header() {
+export default function Header({ lang }: { lang: Lang }) {
+  const c = COPY[lang];
+  const other = COPY[lang === "en" ? "ro" : "en"];
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,11 +25,11 @@ export default function Header() {
   return (
     <header className={`${scrolled ? "is-scrolled" : ""} ${open ? "menu-open" : ""}`.trim()}>
       <div className="container">
-        <BrandMark />
+        <BrandMark lang={lang} />
         <button
           type="button"
           className="mobile-menu-btn"
-          aria-label="Toggle menu"
+          aria-label={c.ui.menu}
           aria-expanded={open}
           aria-controls="main-nav"
           onClick={() => setOpen((value) => !value)}
@@ -45,17 +42,22 @@ export default function Header() {
         </button>
         <nav aria-label="Main" id="main-nav">
           <ul className="nav-links">
-            {NAV.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} onClick={() => setOpen(false)}>
-                  {item.label}
+            {NAV_IDS.map((id) => (
+              <li key={id}>
+                <Link href={`${c.homePath}#${id}`} onClick={() => setOpen(false)}>
+                  {c.ui.nav[id]}
                 </Link>
               </li>
             ))}
+            <li>
+              <a href={other.homePath} hrefLang={other.htmlLang} lang={other.htmlLang} className="lang-switch">
+                {c.ui.switchLabel}
+              </a>
+            </li>
           </ul>
         </nav>
         <a href={SITE.appStoreUrl} target="_blank" rel="noopener noreferrer" className="btn-glow btn-sm nav-cta">
-          Get the app
+          {c.ui.getApp}
         </a>
       </div>
     </header>

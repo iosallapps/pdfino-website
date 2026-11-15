@@ -1,0 +1,17 @@
+# Pdfino
+
+> Pdfino is an iPhone and iPad app with 39 PDF tools, by Visto Apps (https://vistoapps.com). It compresses PDF file size, and scans, merges, splits, signs, fills, protects, redacts and converts PDFs on the device, with no account and no file uploaded to a Pdfino server.
+
+Platforms: iOS and iPadOS 17.0 or later. Price model: free to download, with ads and daily limits; a subscription removes the limits and the ads, and the App Store shows the price for your region. Available in English and Romanian on this site.
+
+## Pages
+- [Home (English)](https://pdfino.com/)
+- [Acasă (Română)](https://pdfino.com/ro/)
+- [Privacy Policy](https://pdfino.com/privacy.html)
+- [Politica de confidențialitate](https://pdfino.com/ro/privacy.html)
+- [Terms of Use](https://pdfino.com/terms.html)
+- [Termeni de utilizare](https://pdfino.com/ro/terms.html)
+- [App Store](https://apps.apple.com/app/id6748689545)
+
+## Contact
+iosallapps@gmail.com

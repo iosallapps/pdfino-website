@@ -1,7 +1,9 @@
 import SectionHeading from "@/components/ui/SectionHeading";
-import { PRIVACY } from "@/lib/content";
+import { COPY, type Lang } from "@/lib/content";
 
-export default function Privacy() {
+export default function Privacy({ lang }: { lang: Lang }) {
+  const c = COPY[lang];
+  const PRIVACY = c.privacy;
   return (
     <section id="privacy" className="privacy-block">
       <div className="container">
@@ -15,8 +17,8 @@ export default function Privacy() {
               </div>
             ))}
           </div>
-          <a href="/privacy.html" className="text-link">
-            Read the privacy policy
+          <a href={lang === "en" ? "/privacy.html" : "/ro/privacy.html"} className="text-link">
+            {c.ui.readPrivacy}
           </a>
         </div>
       </div>

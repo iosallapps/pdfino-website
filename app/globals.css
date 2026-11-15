@@ -269,7 +269,7 @@ h1 em, h2 em, .accent {
 footer { position: relative; margin-top: 20px; background: rgba(12, 3, 8, .6); border-top: 1px solid rgba(255,255,255,.08); }
 .footer-content { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 30px; padding: 44px 0 26px; }
 .footer-section h3 { font-size: 22px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 8px; }
-.footer-section h4 { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; }
+.footer-section h2 { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; }
 .footer-section p { font-size: 14.5px; color: var(--text-2); max-width: 300px; margin-bottom: 18px; }
 .footer-section ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
 .footer-section li { font-size: 14.5px; }
@@ -342,3 +342,4 @@ footer { position: relative; margin-top: 20px; background: rgba(12, 3, 8, .6); b
 @media (max-width: 900px), (hover: none) {
   header.is-scrolled, header.menu-open { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(20, 7, 13, .94); }
 }
+.nav-links a.lang-switch { border: 1px solid var(--glass-line); }

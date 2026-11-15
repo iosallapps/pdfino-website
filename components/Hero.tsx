@@ -1,10 +1,12 @@
 import AppStoreBadge from "@/components/ui/AppStoreBadge";
 import Highlighted from "@/components/ui/Highlighted";
 import PhoneShot from "@/components/ui/PhoneShot";
-import { HERO } from "@/lib/content";
+import { COPY, type Lang } from "@/lib/content";
 import { TOOL_COUNT } from "@/lib/constants";
 
-export default function Hero() {
+export default function Hero({ lang }: { lang: Lang }) {
+  const c = COPY[lang];
+  const HERO = c.hero;
   return (
     <section className="hero">
       <div className="container">
@@ -15,12 +17,12 @@ export default function Hero() {
           </h1>
           <p className="tagline">{HERO.lead}</p>
           <div className="cta-buttons">
-            <AppStoreBadge size="lg" />
+            <AppStoreBadge size="lg" lang={lang} />
             <a href="#tools" className="btn-outline">
-              See all {TOOL_COUNT} tools
+              {c.ui.seeTools(TOOL_COUNT)}
             </a>
           </div>
-          <ul className="fact-list" aria-label="At a glance">
+          <ul className="fact-list" aria-label={c.ui.glance}>
             {HERO.facts.map((fact) => (
               <li key={fact}>{fact}</li>
             ))}
@@ -29,13 +31,13 @@ export default function Hero() {
 
         <div className="hero-phones">
           <div className="side left">
-            <PhoneShot name="scan" alt="The Scan tab in Pdfino" sizes="(min-width: 1024px) 210px, 30vw" />
+            <PhoneShot name="scan" alt={HERO.altScan} sizes="(min-width: 1024px) 210px, 30vw" />
           </div>
           <div className="main">
-            <PhoneShot name="home" alt="Pdfino's Tools home with recent files and the most popular tools" priority sizes="(min-width: 1024px) 270px, 60vw" />
+            <PhoneShot name="home" alt={HERO.altHome} priority sizes="(min-width: 1024px) 270px, 60vw" />
           </div>
           <div className="side right">
-            <PhoneShot name="compress" alt="A finished compression in Pdfino" sizes="(min-width: 1024px) 210px, 30vw" />
+            <PhoneShot name="compress" alt={HERO.altCompress} sizes="(min-width: 1024px) 210px, 30vw" />
           </div>
         </div>
       </div>
