@@ -11,7 +11,7 @@ export const SITE = {
   appStoreUrl: "https://apps.apple.com/app/id6748689545",
   logoUrl: "https://pdfino.com/icon-512.png",
   officialNote: "Pdfino is an iOS and iPadOS app available on the App Store. pdfino.com is its only official website.",
-  supportEmail: "pdfinoapp@gmail.com",
+  supportEmail: "iosallapps@gmail.com",
 };
 
 export const HERO = {
